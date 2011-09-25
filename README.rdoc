@@ -1,0 +1,101 @@
+= Bootstrapped
+
+A gem containing Twitter's Bootstrap CSS Project, a JQuery Plugin to simply user interface interactivity, and generators to make scaffolds sexy.
+
+In addition, it as generators based off of Ryan Bates nifty-generators https://github.com/ryanb/nifty-generators/. enables you to create fully styled user interfaces using Bootstrap CSS with very little effort. There is one difference though, HAML generators are not included.
+
+== Setup
+
+=== Rails 3
+
+Add the gem to your Gemfile.
+
+  gem "bootstrapped"
+
+Add the following to the application.css in the Rails 3.1 pipeline pipeline
+
+  = require bootstrap
+	
+Include any of the BootStrap JavaScript files as necessary
+
+  //= require bootstrap-alert
+  //= require bootstrap-dropdown
+	//= require bootstrap-modal
+	//= require bootstrap-popover
+	//= require bootstrap-scrollspy
+	//= require bootstrap-tabs
+	//= require bootstrap-twipsy
+  //= require jquery.tablesorter
+	
+The Table Sorter JQuery plugin is only required if you want tables that allow you to order on the column headings.
+
+Then you can run any of the included generators.
+
+  rails g bootstrapped:scaffold Recipe name:string index new
+
+== Included Generators
+
+* bootstrapped:layout: generates generic layout, stylesheet, and helper files.
+* bootstrapped:scaffold: generates a controller and optional model/migration.
+
+To view the README for each generator, run it with the +help+ option.
+
+  rails g bootstrapped:layout --help
+
+== Troubleshooting and FAQs
+
+<b>What is the difference between bootstrapped:scaffold and built-in scaffold?</b>
+
+One of the primary differences is that bootstrapped:scaffold allows you to choose which controller actions to generate.
+
+  rails g bootstrapped:scaffold post name:string index new edit
+
+There are a few changes to the generated code as well, such as no XML format by default.
+
+It also offers support for Shoulda, and RSpec.
+
+
+<b>I get "undefined method 'title'" error.</b>
+
+Try running bootstrapped:layout, that will generate this helper method. Or you can just change the templates to whatever approach you prefer for setting the title.
+
+
+<b>I can't set new attributes in my model.</b>
+
+Add the attribute to the attr_accessible line in the model.
+
+
+<b>I get "undefined method 'root_url'" error.</b>
+
+Some generators default redirecting to the root_url. Set this in your routes.rb file like this (substituting your controller name).
+
+  root :to => "home#index"
+
+
+<b>I get a missing database error.</b>
+
+Run <tt>rake db:migrate</tt>.
+
+
+<b>I get a routing error when I try to submit a form.</b>
+
+Try restarting your development server. Sometimes it doesn't detect the change in the routing.
+
+
+<b>The tests/specs don't work.</b>
+
+Make sure you have mocha installed and require it in your spec/test helper.
+
+  gem install mocha
+
+  # in spec_helper.rb
+  config.mock_with :mocha
+
+  # in test_helper.rb
+  require 'mocha'
+
+== Found a bug?
+
+If you are having a problem with Bootstrapped, first look at the FAQs above. If you still cannot resolve it, please submit an issue here.
+
+http://github.com/entropillc/bootstrapped/issues
