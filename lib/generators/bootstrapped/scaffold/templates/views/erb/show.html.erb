@@ -1,0 +1,23 @@
+<%% title "<%= singular_name.titleize %> Details" %>
+
+<div class="well">
+  
+  <%- model_attributes.each do |attribute| %>
+  <p>
+    <strong><%= attribute.human_name.titleize %>:</strong>
+	  <%%= @<%= instance_name %>.<%= attribute.name %> %>
+  </p>
+  <% end -%>
+</div>
+
+<p>
+<%- if action? :edit -%>
+  <%%= link_to "Edit", <%= item_path :action => :edit, :instance_variable => true %>, :class => 'btn float-right' %> |
+<%- end -%>
+<%- if action? :destroy -%>
+  <%%= link_to "Destroy", <%= item_path :instance_variable => true %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn float-right' %> |
+<%- end -%>
+<%- if action? :index -%>
+  <%%= link_to "View All", <%= items_path %>, :class => 'btn float-right' %>
+<%- end -%>
+</p>

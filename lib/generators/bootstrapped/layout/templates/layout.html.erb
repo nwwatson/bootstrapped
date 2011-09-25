@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <%%= stylesheet_link_tag "application" %>
+    <%%= javascript_include_tag "application" %>
+    <%%= csrf_meta_tag %>
+    <%%= yield(:head) %>
+  </head>
+  <body class="with-header">
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h3><%%= link_to 'Project Name', '#' %></h3>
+        </div>
+      </div>
+    </div>
+    <%%= display_flash_message %>
+    <div class="container">
+      <%% flash.each do |name, msg| %>
+        <%%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%% end %>
+      <%%= content_tag :h1, yield(:title) if show_title? %>
+      <%%= yield %>
+      <footer>
+        <p>&copy; Company <%%= Time.now.year %></p>
+      </footer>
+    </div>
+  </body>
+</html>

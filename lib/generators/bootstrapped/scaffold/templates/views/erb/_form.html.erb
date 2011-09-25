@@ -1,0 +1,15 @@
+<%%= form_for <%= item_path :instance_variable => true %> do |f| %>
+	<fieldset>
+	<%- model_attributes.each do |attribute| -%>
+	  <div class="clearfix">
+	    <%%= f.label :<%= attribute.name %> %>
+	    <div class="input">
+	      <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :class => "xxlarge" %>
+	    </div>
+	  </div>
+	<%- end -%>
+	  <div class="actions">
+	    <%%= f.submit :class => "btn primary float-right"%>
+	  </div>
+	<fieldset>
+<%% end %>
