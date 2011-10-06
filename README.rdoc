@@ -20,11 +20,11 @@ Include any of the BootStrap JavaScript files as necessary
 
   //= require bootstrap-alert
   //= require bootstrap-dropdown
-	//= require bootstrap-modal
-	//= require bootstrap-popover
-	//= require bootstrap-scrollspy
-	//= require bootstrap-tabs
-	//= require bootstrap-twipsy
+  //= require bootstrap-modal
+  //= require bootstrap-popover
+  //= require bootstrap-scrollspy
+  //= require bootstrap-tabs
+  //= require bootstrap-twipsy
   //= require jquery.tablesorter
 	
 The Table Sorter JQuery plugin is only required if you want tables that allow you to order on the column headings.
