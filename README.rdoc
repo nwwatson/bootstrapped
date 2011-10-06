@@ -18,7 +18,7 @@ Add the following to the application.css in the Rails 3.1 pipeline pipeline
 	
 Include any of the BootStrap JavaScript files as necessary
 
-  //= require bootstrap-alert
+  //= require bootstrap-alerts
   //= require bootstrap-dropdown
   //= require bootstrap-modal
   //= require bootstrap-popover
