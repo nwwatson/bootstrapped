@@ -27,7 +27,7 @@ Include any of the BootStrap JavaScript files as necessary
   //= require bootstrap-twipsy
   //= require jquery.tablesorter
 	
-The Table Sorter JQuery plugin is only required if you want tables that allow you to order on the column headings.
+The Table Sorter JQuery plugin (jquery.tablesorter, not included) is only required if you want tables that allow you to order on the column headings.
 
 Then you can run any of the included generators.
 
