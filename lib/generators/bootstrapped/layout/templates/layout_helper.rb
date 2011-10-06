@@ -8,7 +8,7 @@ module LayoutHelper
     @show_title = show_title
   end
 
-  def show_title?
+  def show_title
     @show_title
   end
 
@@ -18,5 +18,9 @@ module LayoutHelper
 
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
+  end
+  
+  def app_name
+    Rails.application.class.to_s.split("::").first
   end
 end
