@@ -8,7 +8,7 @@ module LayoutHelper
     @show_title = show_title
   end
 
-  def show_title?
+  def show_title
     @show_title
   end
 
