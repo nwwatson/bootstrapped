@@ -19,4 +19,8 @@ module LayoutHelper
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
   end
+  
+  def app_name
+    Rails.application.class.to_s.split("::").first
+  end
 end
