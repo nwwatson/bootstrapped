@@ -11,7 +11,7 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <%= link_to app_name, '#', :class => "brand" %>
+          <%%= link_to app_name, '#', :class => "brand" %>
           <ul class="nav">
           	<li class="active">
           		<a href='#'>Home</a>
@@ -20,16 +20,16 @@
           		<a href='#'>About</a>
           	</li>
           </ul>
-        <p class="pull-right"><%= text_field '#', '#'%></p>
+        <p class="pull-right"><%%= text_field '#', '#'%></p>
         </div>
       </div>
     </div>
-    <%= display_flash_message %>
+    <%%= display_flash_message %>
     <div class="container">
       <%%= content_tag :h1, yield(:title) if show_title %>
       <%%= yield %>
       <footer>
-         <p><%= app_name %> &copy;  <%= Time.now.year %></p>
+         <p><%%= app_name %> &copy;  <%= Time.now.year %></p>
       </footer>
     </div>
   </body>
