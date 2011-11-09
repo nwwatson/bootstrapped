@@ -14,13 +14,13 @@ module ErrorMessagesHelper
     end
   end
   
-def display_flash_message
+  def display_flash_message
   	partials = String.new
-	flash.each do |key, value|  
+	  flash.each do |key, value|  
       css_class = key.to_s.eql?('notice') ? 'success' : 'error'
       partials << render( :partial => 'share/flash', :locals => { :css => css_class, :message => value }) 
     end
-	partials.html_safe
+	  partials.html_safe
   end
 
   module FormBuilderAdditions
