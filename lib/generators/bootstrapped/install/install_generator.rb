@@ -4,9 +4,9 @@ module Bootstrapped
   module Generators
     class InstallGenerator < Base
       argument :less, :type => :string, :default => true, :banner => 'less'
-
-      def add_less_rails_gem
-        gem 'less-rails', :group => :assets
+      
+      def self.source_root
+        @source_root ||= File.expand_path("../../../../../vendor/framework", __FILE__)
       end
       
       def copy_less_files
