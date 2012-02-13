@@ -1,3 +1,6 @@
 [submodule "vendor/assets/bootstrap"]
 	path = vendor/assets/bootstrap
 	url = git@github.com:entropillc/bootstrap.git
+[submodule "vendor/assets/modernizer"]
+	path = vendor/assets/modernizer
+	url = https://github.com/entropillc/Modernizr.git
