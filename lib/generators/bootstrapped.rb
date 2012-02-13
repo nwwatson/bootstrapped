@@ -4,7 +4,7 @@ module Bootstrapped
   module Generators
     class Base < ::Rails::Generators::Base
       def self.source_root
-        @_bootstrapped_source_root ||= File.expand_path(File.join(File.dirname(__FILE__), 'bootstrapped', generator_name, 'templates'))
+        @source ||= File.expand_path(File.join(File.dirname(__FILE__), 'bootstrapped', generator_name, 'templates'))
       end
 
       def self.banner
