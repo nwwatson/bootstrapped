@@ -1,4 +1,4 @@
-require 'less-rails'
+require 'less'
 require 'bootstrapped/version'
 require 'bootstrapped/engine'
 
