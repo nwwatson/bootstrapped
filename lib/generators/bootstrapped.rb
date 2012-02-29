@@ -18,7 +18,11 @@ module Bootstrapped
         File.open(destination_path("Gemfile"), 'a') { |f| f.write("\n") } unless gemfile_content =~ /\n\Z/
         gem name, options unless gemfile_content.include? name
       end
-
+      
+      def destination_path(path)
+        File.join(destination_root, path)
+      end
+      
       def print_usage
         self.class.help(Thor::Base.shell.new)
         exit

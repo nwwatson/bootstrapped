@@ -1,39 +1,43 @@
 <%% title "<%= plural_name.titleize %>" %>
 
 <div class="well">
-	<table class="zebra-striped">
-	  <tr>
-	  <%- model_attributes.each do |attribute| %>
-	    <th><%= attribute.human_name.titleize %></th>
-	  <%- end -%>
-		<%- if action? :show -%>
-      <th></th>
-    <%- end -%>
-    <%- if action? :edit -%>
-      <th></th>
-    <%- end -%>
-    <%- if action? :destroy -%>
-      <th></th>
-    <%- end -%>
-	  </tr>
-	  <%% @<%= instances_name %>.each do |<%= instance_name %>| %>
-	    <tr>
-	    <%- model_attributes.each do |attribute| %>
-	      <td><%%= <%= instance_name %>.<%= attribute.name %> %></td>
-	    <%- end -%>
-	    <%- if action? :show -%>
-	      <td><%%= link_to "Show", <%= item_path %> %></td>
-	    <%- end -%>
-	    <%- if action? :edit -%>
-	      <td><%%= link_to "Edit", <%= item_path :action => :edit %> %></td>
-	    <%- end -%>
-	    <%- if action? :destroy -%>
-	      <td><%%= link_to "Destroy", <%= item_path %>, :confirm => 'Are you sure?', :method => :delete %></td>
-	    <%- end -%>
-	    </tr>
-	  <%% end %>
+	<table class="table table-striped">
+	  <thead>
+  	  <tr>
+  	  <%- model_attributes.each do |attribute| %>
+  	    <th><%= attribute.human_name.titleize %></th>
+  	  <%- end -%>
+  		<%- if action? :show -%>
+        <th></th>
+      <%- end -%>
+      <%- if action? :edit -%>
+        <th></th>
+      <%- end -%>
+      <%- if action? :destroy -%>
+        <th></th>
+      <%- end -%>
+  	  </tr>
+  	</thead>
+  	<tbody>
+  	  <%% @<%= instances_name %>.each do |<%= instance_name %>| %>
+  	    <tr>
+  	    <%- model_attributes.each do |attribute| %>
+  	      <td><%%= <%= instance_name %>.<%= attribute.name %> %></td>
+  	    <%- end -%>
+  	    <%- if action? :show -%>
+  	      <td><%%= link_to "Show", <%= item_path %>, :class => 'btn btn-mini btn-primary' %></td>
+  	    <%- end -%>
+  	    <%- if action? :edit -%>
+  	      <td><%%= link_to "Edit", <%= item_path :action => :edit %>, :class => 'btn btn-mini' %></td>
+  	    <%- end -%>
+  	    <%- if action? :destroy -%>
+  	      <td><%%= link_to "Destroy", <%= item_path %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-mini btn-danger' %></td>
+  	    <%- end -%>
+  	    </tr>
+  	  <%% end %>
+  	</tbody>
 	</table>
 </div>
 <%- if action? :new -%>
-<p><%%= link_to "New <%= singular_name.titleize %>", <%= item_path :action => :new %>, :class => 'btn primary float-right' %></p>
+<p><%%= link_to "New <%= singular_name.titleize %>", <%= item_path :action => :new %>, :class => 'btn primary' %></p>
 <%- end -%>

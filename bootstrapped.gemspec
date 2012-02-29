@@ -4,7 +4,7 @@ require "bootstrapped/version"
 
 Gem::Specification.new do |s|
   s.name        = "bootstrapped"
-  s.version     ='0.1.0'
+  s.version     ='0.1.1'
   s.authors     = ["Nicholas Watson"]
   s.email       = ["nwwatson@gmail.com"]
   s.homepage    = ""
@@ -12,11 +12,13 @@ Gem::Specification.new do |s|
   s.description = %q{Twitters Bootstrap CSS and JS files all in one nice little gem}
 
   s.rubyforge_project = "bootstrapped"
+  s.files = Dir["lib/**/*"] + Dir["vendor/**/*"] + ["Rakefile", "README.rdoc"]
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.require_paths = ["lib"]
 
-  s.add_dependency "railties", "~> 3.1"
-  s.add_dependency "thor",     "~> 0.14"
-  s.add_dependency "less", "~> 2.0.9"
-  s.add_runtime_dependency "less-rails", "~> 2.1.0"
+  s.add_dependency             'railties',   '>= 3.1'
+  s.add_dependency             'actionpack', '>= 3.1'
+  s.add_development_dependency 'rails', '>= 3.1'
   s.add_development_dependency 'rspec-rails', '~> 2.6.1'
   s.add_development_dependency 'mocha', '~> 0.9.12'
   s.add_development_dependency 'cucumber', '~> 1.0.6'

@@ -1,6 +1,0 @@
-[submodule "vendor/assets/bootstrap"]
-	path = vendor/assets/bootstrap
-	url = git@github.com:entropillc/bootstrap.git
-[submodule "vendor/assets/Modernizr"]
-	path = vendor/assets/Modernizr
-	url = git@github.com:entropillc/Modernizr.git
