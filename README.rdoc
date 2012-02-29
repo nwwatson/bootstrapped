@@ -12,21 +12,10 @@ Add the gem to your Gemfile.
 
   gem "bootstrapped"
 
-Add the following to the application.css in the Rails 3.1 pipeline pipeline
 
-  *= require bootstrap
-	
-Include any of the BootStrap JavaScript files as necessary
 
-  //= require bootstrap-alerts
-  //= require bootstrap-dropdown
-  //= require bootstrap-modal
-  //= require bootstrap-popover
-  //= require bootstrap-scrollspy
-  //= require bootstrap-tabs
-  //= require bootstrap-twipsy
-  //= require jquery.tablesorter
-	
+
+
 The Table Sorter JQuery plugin (jquery.tablesorter, not included) is only required if you want tables that allow you to order on the column headings.
 
 Then you can run any of the included generators.

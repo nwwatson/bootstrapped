@@ -64,10 +64,6 @@ module Bootstrapped
         end
       end
 
-      def add_gems
-        add_gem "mocha", :group => :test
-      end
-
       def create_model
         unless @skip_model
           template 'model.rb', "app/models/#{model_path}.rb"

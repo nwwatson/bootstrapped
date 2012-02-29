@@ -2,9 +2,9 @@
 <%%= form_for <%= item_path :instance_variable => true %> do |f| %>
 	<fieldset>
 	<%- model_attributes.each do |attribute| -%>
-	  <div class="clearfix">
+	  <div class="control-group">
 	    <%%= f.label :<%= attribute.name %> %>
-	    <div class="input">
+	    <div class="controls">
 	      <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :class => "xxlarge" %>
 	    </div>
 	  </div>
