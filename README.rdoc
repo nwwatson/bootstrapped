@@ -10,9 +10,17 @@ Bootstrapped was specifically developed for Rails 3 and above applications. To i
 
   gem "bootstrapped", :git => 'https://github.com/entropillc/bootstrapped.git'
 
-After running bundle install to install the gem, you need to run the bootstrapped install generator.
+After running bundle install to install the gem, you need to run the bootstrapped install generator. The generator gives you the ability to install Bootstrapped with Less support or plain CSS. The default is Less support * NOTE: If you are using JRuby, you must use the static version at this time due to compatibility issues with the less.rb gem.
 
+  rails g bootstrapped:install [less or static]
+  
+To install with Less Support
+  
   rails g bootstrapped:install
+
+To install with static CSS Support
+
+  rails g bootstrapped:install static
 
 == Included Generators
 
