@@ -1,7 +1,1 @@
-<%% title "New <%= singular_name.titleize %>" %>
-
-<%= render_form %>
-
-<%- if action? :index -%>
-<p><%%= link_to "Back to List", <%= items_path %> %></p>
-<%- end -%>
+<%%= render :partial => 'form', :locals => { :form_action_title => 'Edit' } %>

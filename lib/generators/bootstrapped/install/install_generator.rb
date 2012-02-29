@@ -4,17 +4,38 @@ require 'generators/bootstrapped'
 module Bootstrapped
   module Generators
     class InstallGenerator < ::Bootstrapped::Generators::Base
-      argument :less, :type => :string, :default => true, :banner => 'less'
-      
-      
-      #@source_root File.expand_path("", __FILE__)
-      def self.source_root
-        File.expand_path("../../../../../vendor/assets/bootstrap/", __FILE__)
+      desc "This generator installs Twitter Bootstrap to Asset Pipeline"
+      source_root File.expand_path("../templates", __FILE__)
+
+      def add_assets
+
+        if File.exist?('app/assets/javascripts/application.js')
+          insert_into_file "app/assets/javascripts/application.js", "//= require twitter/bootstrap\n", :after => "jquery_ujs\n"
+        else
+          copy_file "application.js", "app/assets/javascripts/application.js"
+        end
+
+        if File.exist?('app/assets/stylesheets/application.css')
+          # Add our own require:
+          content = File.read("app/assets/stylesheets/application.css")
+          if content.match(/require_tree\s+\./)
+            # Good enough - that'll include our bootstrap_and_overrides.css.less
+          else
+            style_require_block = " *= require bootstrap_and_overrides\n"
+            insert_into_file "app/assets/stylesheets/application.css", style_require_block, :after => "require_self\n"
+          end
+        else
+          copy_file "application.css", "app/assets/stylesheets/application.css"
+        end
+
+      end
+
+      def add_bootstrap
+        copy_file "bootstrap.coffee", "app/assets/javascripts/bootstrap.js.coffee"
+        copy_file "bootstrap_and_overrides.less", "app/assets/stylesheets/bootstrap_and_overrides.css.less"
       end
       
-      def copy_less_files
-        directory 'less', 'app/assets/stylesheets/bootstrap/less'
-      end
+      
 
     end
   end
