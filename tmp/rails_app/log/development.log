@@ -1,0 +1,207 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-02-29 11:53:30 -0500
+Served asset /rails.png - 200 OK (14ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-02-29 11:54:59 -0500
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-29 11:55:29 -0500
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Compiled application.css  (17ms)  (pid 41808)
+Compiled welcome.css  (3ms)  (pid 41808)
+Compiled application.js  (13ms)  (pid 41808)
+Compiled jquery.js  (19ms)  (pid 41808)
+Compiled jquery_ujs.js  (0ms)  (pid 41808)
+Compiled welcome.js  (369ms)  (pid 41808)
+Completed 200 OK in 515ms (Views: 514.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-29 11:55:29 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2012-02-29 11:55:29 -0500
+Served asset /welcome.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-29 11:55:29 -0500
+Served asset /jquery.js - 200 OK (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-29 11:55:29 -0500
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2012-02-29 11:55:29 -0500
+Served asset /welcome.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-29 11:55:30 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-02-29 11:55:30 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-29 11:58:26 -0500
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Compiled application.css  (1ms)  (pid 41812)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__3534235486047065169_70242687636560'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-29 11:59:47 -0500
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Compiled application.css  (1ms)  (pid 41815)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error ('twitter/bootstrap/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__525555466053228511_70364156673800'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-29 12:02:23 -0500
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Compiled application.css  (1ms)  (pid 41826)
+Compiled bootstrap_and_overrides.css  (456ms)  (pid 41826)
+Completed 500 Internal Server Error in 528ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap'
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/javascripts/application.js:9)):
+    72:     <!-- JAVASCRIPT
+    73:     ================================================== -->
+    74:     <!-- Placed at the end of the document so the pages load faster -->
+    75:     <%= javascript_include_tag "application" %>
+    76: 
+    77:   </body>
+    78: </html>
+  app/views/layouts/application.html.erb:75:in `_app_views_layouts_application_html_erb__1285899092311608106_70231595304320'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Compiled application.js  (3ms)  (pid 41826)
+Compiled bootstrap.js  (38ms)  (pid 41826)
+Completed 200 OK in 84ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /bootstrap_and_overrides.css - 200 OK (5ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /welcome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /welcome.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-02-29 12:03:10 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Compiled application.js  (3ms)  (pid 41826)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /welcome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /welcome.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-02-29 12:05:57 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
