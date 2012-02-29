@@ -1,0 +1,43 @@
+Feature: Bootstrapped Installation Generator
+  In order to install Bootstrapped
+  As a rails developer
+  I want to install Bootstrapped
+  
+  Scenario: Generate Installation with LESS CSS Files
+    Given a new Rails app
+    When I run "rails g bootstrapped:install"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/accordion.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/alerts.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/bootstrap.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/breadcrumbs.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/button-groups.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/buttons.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/carousel.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/close.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/code.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/component-animations.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/dropdowns.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/forms.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/grid.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/hero-unit.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/labels.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/layouts.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/mixins.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/modals.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/navbar.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/navs.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/pager.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/pagination.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/popovers.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/progress-bars.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/reset.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/responsive.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/scaffolding.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/sprites.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/tables.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/thumbnails.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/tooltip.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/type.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/utilities.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/variables.less"
+    #And I should see file "app/assets/stylesheets/bootstrap/less/wells.less"

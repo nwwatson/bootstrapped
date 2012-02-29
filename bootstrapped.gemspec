@@ -4,7 +4,7 @@ require "bootstrapped/version"
 
 Gem::Specification.new do |s|
   s.name        = "bootstrapped"
-  s.version     = Bootstrapped::VERSION
+  s.version     ='0.1.0'
   s.authors     = ["Nicholas Watson"]
   s.email       = ["nwwatson@gmail.com"]
   s.homepage    = ""
@@ -15,8 +15,10 @@ Gem::Specification.new do |s|
 
   s.add_dependency "railties", "~> 3.1"
   s.add_dependency "thor",     "~> 0.14"
+  s.add_dependency "less", "~> 2.0.9"
   s.add_runtime_dependency "less-rails", "~> 2.1.0"
   s.add_development_dependency 'rspec-rails', '~> 2.6.1'
+  s.add_development_dependency 'mocha', '~> 0.9.12'
   s.add_development_dependency 'cucumber', '~> 1.0.6'
   s.add_development_dependency "bundler", "~> 1.0.0"
   s.add_development_dependency "rails",   "~> 3.1"
