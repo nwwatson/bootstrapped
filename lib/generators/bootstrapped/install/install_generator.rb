@@ -5,8 +5,7 @@ module Bootstrapped
   module Generators
     class InstallGenerator < ::Bootstrapped::Generators::Base
       desc "This generator installs Twitter Bootstrap to Asset Pipeline"
-      source_root File.expand_path("../templates", __FILE__)
-
+      
       def add_assets
 
         if File.exist?('app/assets/javascripts/application.js')
@@ -35,8 +34,6 @@ module Bootstrapped
         copy_file "bootstrap_and_overrides.less", "app/assets/stylesheets/bootstrap_and_overrides.css.less"
       end
       
-      
-
     end
   end
 end

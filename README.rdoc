@@ -1,90 +1,63 @@
 = Bootstrapped
 
-A gem containing Twitter's Bootstrap CSS Project, a JQuery Plugin to simply user interface interactivity, and generators to make scaffolds sexy.
+Bootstrapped is a gem that helps you quickly integrate Twitter's Bootstrap in to your project to enable you to build user interfaces rapidly. 
 
-In addition, it as generators based off of Ryan Bates nifty-generators https://github.com/ryanb/nifty-generators/. enables you to create fully styled user interfaces using Bootstrap CSS with very little effort. There is one difference though, HAML generators are not included.
+Bootstrapped also contains generators based off of Ryan Bates's nifty-generators https://github.com/ryanb/nifty-generators/ to help you rapidly scaffold. Unlike generators nifty-generators, Bootstrapped generators do not support HAML.
 
 == Setup
 
-=== Rails 3
+Bootstrapped was specifically developed for Rails 3 and above applications. To install, include bootstrapped in your Gemfile.
 
-Add the gem to your Gemfile.
+  gem "bootstrapped", :git => 'https://github.com/entropillc/bootstrapped.git'
 
-  gem "bootstrapped"
+After running bundle install to install the gem, you need to run the bootstrapped install generator.
 
-
-
-
-
-The Table Sorter JQuery plugin (jquery.tablesorter, not included) is only required if you want tables that allow you to order on the column headings.
-
-Then you can run any of the included generators.
-
-  rails g bootstrapped:scaffold Recipe name:string index new
+  rails g bootstrapped:install
 
 == Included Generators
+
+Bootstrapped contains layout and scaffold generators that have been modified to output HTML in Twitter Bootstrap markup. Currently, the following generators are implemented.
 
 * bootstrapped:layout: generates generic layout, stylesheet, and helper files.
 * bootstrapped:scaffold: generates a controller and optional model/migration.
 
-To view the README for each generator, run it with the +help+ option.
+=== The Layout Generator
 
-  rails g bootstrapped:layout --help
+The layout generator allows you to quickly generate a fixed Twitter Bootstrap layout by running the following command:
 
-== Troubleshooting and FAQs
+  rails g bootstrapped:layout
+  
+You can change the name of the layout by specifying the layout name. For example, the following command will generate a layout called photos
 
-<b>What is the difference between bootstrapped:scaffold and built-in scaffold?</b>
+  rails g bootstrapped:layout photos
+  
+You can also specify if you want a fixed for fluid layout. If you choose to specify the layout, you must specify the layout name as well. The options are fluid and fixed
 
-One of the primary differences is that bootstrapped:scaffold allows you to choose which controller actions to generate.
+  rails g boostrapped:layout [layout_name] [fixed or fluid]
 
-  rails g bootstrapped:scaffold post name:string index new edit
+An example command:
 
-There are a few changes to the generated code as well, such as no XML format by default.
+  rails g bootstrapped:layout application fluid
 
-It also offers support for Shoulda, and RSpec.
+=== The Scaffold Generator
 
-
-<b>I get "undefined method 'title'" error.</b>
-
-Try running bootstrapped:layout, that will generate this helper method. Or you can just change the templates to whatever approach you prefer for setting the title.
-
-
-<b>I can't set new attributes in my model.</b>
-
-Add the attribute to the attr_accessible line in the model.
+The layout generator allows you to quickly scaffold applications.
 
 
-<b>I get "undefined method 'root_url'" error.</b>
+== Tests
 
-Some generators default redirecting to the root_url. Set this in your routes.rb file like this (substituting your controller name).
+Bootstrapped has been tested using Cucumber. To run the tests, run the following command
 
-  root :to => "home#index"
-
-
-<b>I get a missing database error.</b>
-
-Run <tt>rake db:migrate</tt>.
-
-
-<b>I get a routing error when I try to submit a form.</b>
-
-Try restarting your development server. Sometimes it doesn't detect the change in the routing.
-
-
-<b>The tests/specs don't work.</b>
-
-Make sure you have mocha installed and require it in your spec/test helper.
-
-  gem install mocha
-
-  # in spec_helper.rb
-  config.mock_with :mocha
-
-  # in test_helper.rb
-  require 'mocha'
+  cucumber
 
 == Found a bug?
 
 If you are having a problem with Bootstrapped, first look at the FAQs above. If you still cannot resolve it, please submit an issue here.
 
 http://github.com/entropillc/bootstrapped/issues
+
+== License
+
+Copyright 2011 Entropi Software, LLC.
+
+Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
