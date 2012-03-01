@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     ='0.9.0'
   s.authors     = ["Nicholas Watson"]
   s.email       = ["nwwatson@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/entropillc/bootstrapped"
   s.summary     = %q{Twitters Bootstrap CSS in a gem}
   s.description = %q{Twitters Bootstrap CSS and JS files all in one nice little gem}
 
