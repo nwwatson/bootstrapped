@@ -4,7 +4,7 @@ require "bootstrapped/version"
 
 Gem::Specification.new do |s|
   s.name        = "bootstrapped"
-  s.version     ='0.9.0'
+  s.version     ='1.0.0'
   s.authors     = ["Nicholas Watson"]
   s.email       = ["nwwatson@gmail.com"]
   s.homepage    = "http://github.com/entropillc/bootstrapped"
