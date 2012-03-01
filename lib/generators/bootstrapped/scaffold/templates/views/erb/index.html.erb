@@ -4,7 +4,7 @@
 	<table class="table table-striped">
 	  <thead>
   	  <tr>
-  	  <%- model_attributes.each do |attribute| %>
+  	  <%- model_attributes.each do |attribute| -%>
   	    <th><%= attribute.human_name.titleize %></th>
   	  <%- end -%>
   		<%- if action? :show -%>
@@ -21,7 +21,7 @@
   	<tbody>
   	  <%% @<%= instances_name %>.each do |<%= instance_name %>| %>
   	    <tr>
-  	    <%- model_attributes.each do |attribute| %>
+  	    <%- model_attributes.each do |attribute| -%>
   	      <td><%%= <%= instance_name %>.<%= attribute.name %> %></td>
   	    <%- end -%>
   	    <%- if action? :show -%>

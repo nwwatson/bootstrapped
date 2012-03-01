@@ -76,4 +76,4 @@ Feature: Bootstrapped Scaffold Generator
     Given a new Rails app
     When I run "rails g bootstrapped:scaffold Project name:string index new"
     Then I should see "class Project" in file "app/models/project.rb"
-    And I should see "<%= form_for @project do |f| %>" in file "app/views/projects/new.html.erb"
+    And I should see "<%= render :partial => 'form', :locals => { :form_action_title => 'New' } %>" in file "app/views/projects/new.html.erb"

@@ -20,7 +20,6 @@ module Bootstrapped
 
       class_option :testunit, :desc => 'Use test/unit for test files.', :group => 'Test framework', :type => :boolean
       class_option :rspec, :desc => 'Use RSpec for test files.', :group => 'Test framework', :type => :boolean
-      class_option :shoulda, :desc => 'Use shoulda for test files.', :group => 'Test framework', :type => :boolean
 
       def initialize(*args, &block)
         super
@@ -272,8 +271,6 @@ module Bootstrapped
           return @test_framework = :testunit
         elsif options.rspec?
           return @test_framework = :rspec
-        elsif options.shoulda?
-          return @test_framework = :shoulda
         else
           return @test_framework = default_test_framework
         end
