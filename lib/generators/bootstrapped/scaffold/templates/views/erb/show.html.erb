@@ -1,8 +1,7 @@
 <%% title "<%= singular_name.titleize %> Details" %>
 
 <div class="well">
-  
-  <%- model_attributes.each do |attribute| %>
+  <%- model_attributes.each do |attribute| -%>
   <p>
     <strong><%= attribute.human_name.titleize %>:</strong>
 	  <%%= @<%= instance_name %>.<%= attribute.name %> %>

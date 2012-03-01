@@ -1,0 +1,637 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-02-29 16:41:13 -0500
+Served asset /rails.png - 200 OK (2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2012-02-29 16:41:19 -0500
+
+ActionController::RoutingError (No route matches [GET] "/welcome/index"):
+  
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/welcome/" for 127.0.0.1 at 2012-02-29 16:41:23 -0500
+
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:41:36 -0500
+  Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+ActiveRecord::StatementInvalid (Could not find table 'projects'):
+  app/controllers/projects_controller.rb:3:in `index'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.4ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProjects (20120229195353)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120229195353')[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("projects")
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:43:06 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 63ms
+
+ActionView::Template::Error (undefined method `title' for #<#<Class:0x007ff3baf19c98>:0x007ff3baf1ff30>):
+    1: <% title "Projects" %>
+    2: 
+    3: <div class="well">
+    4: 	<table class="table table-striped">
+  app/views/projects/index.html.erb:1:in `_app_views_projects_index_html_erb___151218521624260075_70342395098520'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:43:55 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (12ms)  (pid 1928)
+Compiled application.js  (4ms)  (pid 1928)
+Compiled jquery.js  (13ms)  (pid 1928)
+Compiled jquery_ujs.js  (0ms)  (pid 1928)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-29 16:43:55 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-29 16:43:55 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-29 16:43:55 -0500
+Served asset /jquery_ujs.js - 200 OK (36ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-29 16:43:55 -0500
+Served asset /jquery.js - 200 OK (15ms)
+
+
+Started GET "/projects/images/favicon.ico" for 127.0.0.1 at 2012-02-29 16:43:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/projects/images/favicon.ico"):
+  
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:43:57 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-02-29 16:43:57 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-02-29 16:43:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-02-29 16:43:57 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-29 16:43:57 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:44:44 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (0ms)  (pid 1928)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___3913576627257669550_70342395289260'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:46:26 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 1928)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___3913576627257669550_70342395289260'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:47:08 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (1ms)  (pid 1928)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___3913576627257669550_70342395289260'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:47:11 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (1ms)  (pid 1928)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___3913576627257669550_70342395289260'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:47:12 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 1928)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___3913576627257669550_70342395289260'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:47:12 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 1928)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (cannot load such file -- less
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___3913576627257669550_70342395289260'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:48:09 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (14.5ms)
+Compiled application.css  (1ms)  (pid 2078)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error ('twitter/bootstrap/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1251825972860472585_70319106267240'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:49:11 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (15.8ms)
+Compiled application.css  (1ms)  (pid 2079)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error ('twitter/bootstrap/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___4292159898638324510_70187872865980'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:17 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (14.6ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:19 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (15.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:20 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:20 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:20 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:21 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:21 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:57:21 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:58:22 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (1ms)  (pid 2106)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:58:38 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (0ms)  (pid 2106)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:58:39 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (0.4ms)
+Compiled application.css  (0ms)  (pid 2106)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1362786866054105114_70158285945680'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.6ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:58:53 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (15.5ms)
+Compiled application.css  (0ms)  (pid 2109)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error ('twitter/bootstrap/less/bootstrap.less' wasn't found.
+
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/stylesheets/bootstrap_and_overrides.css.less)):
+    16:         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    17:       }
+    18:     </style>
+    19:     <%= stylesheet_link_tag "application", :media => "all" %>
+    20: 
+    21:     <!-- Le fav and touch icons -->
+    22:     <link href="images/favicon.ico" rel="shortcut icon">
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1988983380519132429_70245647471100'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 16:59:26 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Rendered projects/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (couldn't find file 'bootstrap-button.js'
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/javascripts/application.js:10)):
+    78:     <!-- JAVASCRIPT
+    79:     ================================================== -->
+    80:     <!-- Placed at the end of the document so the pages load faster -->
+    81:     <%= javascript_include_tag "application" %>
+    82: 
+    83:   </body>
+    84: </html>
+  app/views/layouts/application.html.erb:81:in `_app_views_layouts_application_html_erb__1988983380519132429_70245647471100'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2012-02-29 17:04:11 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (couldn't find file 'bootstrap-button.js'
+  (in /Users/nwatson/Development/github/bootstrapped/tmp/rails_app/app/assets/javascripts/application.js:10)):
+    78:     <!-- JAVASCRIPT
+    79:     ================================================== -->
+    80:     <!-- Placed at the end of the document so the pages load faster -->
+    81:     <%= javascript_include_tag "application" %>
+    82: 
+    83:   </body>
+    84: </html>
+  app/views/layouts/application.html.erb:81:in `_app_views_layouts_application_html_erb___947775095598942309_70318421233340'
+
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+Rendered /Users/nwatson/.rvm/gems/ruby-1.9.3-p125@bootstrapped/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (2.8ms)

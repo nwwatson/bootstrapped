@@ -17,14 +17,8 @@ module Bootstrapped
 
         unless css_engine.eql?('static')        
           if File.exist?('app/assets/stylesheets/application.css')
-            # Add our own require:
-            content = File.read("app/assets/stylesheets/application.css")
-            if content.match(/require_tree\s+\./)
-              # Good enough - that'll include our bootstrap_and_overrides.css.less
-            else
-              style_require_block = " *= require bootstrap_and_overrides\n"
-              insert_into_file "app/assets/stylesheets/application.css", style_require_block, :after => "require_self\n"
-            end
+            style_require_block = " *= require bootstrap_and_overrides\n"
+            insert_into_file "app/assets/stylesheets/application.css", style_require_block, :after => "require_self\n"
           else
             copy_file "application.css", "app/assets/stylesheets/application.css"
           end
