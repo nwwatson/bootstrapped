@@ -4,10 +4,10 @@ require "bootstrapped/version"
 
 Gem::Specification.new do |s|
   s.name        = "bootstrapped"
-  s.version     ='0.1.1'
+  s.version     ='1.0.0'
   s.authors     = ["Nicholas Watson"]
   s.email       = ["nwwatson@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/entropillc/bootstrapped"
   s.summary     = %q{Twitters Bootstrap CSS in a gem}
   s.description = %q{Twitters Bootstrap CSS and JS files all in one nice little gem}
 
@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency             'railties',   '>= 3.1'
   s.add_dependency             'actionpack', '>= 3.1'
+  s.add_dependency             'less-rails' unless RUBY_PLATFORM == 'java'  
   s.add_development_dependency 'rails', '>= 3.1'
   s.add_development_dependency 'rspec-rails', '~> 2.6.1'
   s.add_development_dependency 'mocha', '~> 0.9.12'

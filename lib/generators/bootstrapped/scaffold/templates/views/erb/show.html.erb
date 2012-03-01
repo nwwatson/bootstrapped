@@ -1,15 +1,13 @@
 <%% title "<%= singular_name.titleize %> Details" %>
 
 <div class="well">
-  
-  <%- model_attributes.each do |attribute| %>
+  <%- model_attributes.each do |attribute| -%>
   <p>
     <strong><%= attribute.human_name.titleize %>:</strong>
 	  <%%= @<%= instance_name %>.<%= attribute.name %> %>
   </p>
   <% end -%>
 </div>
-
 <p>
 <%- if action? :edit -%>
   <%%= link_to "Edit", <%= item_path :action => :edit, :instance_variable => true %>, :class => 'btn' %> |
