@@ -1,0 +1,14 @@
+= form_for <%= item_path :instance_variable => true %>, :html => { :class => 'form-horizontal' } do |f|
+  %fieldset
+    %legend
+      = form_action_title
+      <%= singular_name.titleize %>
+    <%- model_attributes.each do |attribute| -%>
+    .control-group
+      = f.label :<%= attribute.name %>, :class => 'control-label'
+      .controls
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, :class => '<%= attribute.field_type %>'
+    <%- end -%>
+    .form-actions
+      = f.submit nil, :class => 'btn btn-primary'
+      = link_to 'Cancel', <%= items_path %>, :class => 'btn'
