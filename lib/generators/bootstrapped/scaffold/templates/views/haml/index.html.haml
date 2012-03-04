@@ -1,0 +1,25 @@
+- title "<%= plural_name.titleize %>"
+
+.well
+  %table.table.table-striped
+    %thead
+      %tr
+      <%- model_attributes.each do |attribute| -%>
+        %th <%= attribute.human_name.titleize %>
+      <%- end -%>
+        %th
+    %tbody
+      - @<%= instances_name %>.each do |<%= instance_name %>|
+        %tr
+        <%- model_attributes.each do |attribute| -%>
+          %td= <%= instance_name %>.<%= attribute.name %>
+        <%- end -%>
+
+          %td
+            = link_to "Show", <%= item_path %>, :class => 'btn btn-mini btn-primary'
+            = link_to "Edit", <%= item_path :action => :edit %>, :class => 'btn btn-mini'
+            = link_to "Destroy", <%= item_path %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-mini btn-danger'
+
+<%- if action? :new -%>
+%p= link_to "New <%= singular_name.titleize %>", <%= item_path :action => :new %>, :class => 'btn primary'
+<%- end -%>

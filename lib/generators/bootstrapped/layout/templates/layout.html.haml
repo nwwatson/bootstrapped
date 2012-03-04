@@ -1,0 +1,80 @@
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title= content_for?(:title) ? yield(:title) : "<%= app_name %>"
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(name="description" content="")
+    %meta(name="author" content="")
+    = csrf_meta_tags
+    = yield(:head)
+    = stylesheet_link_tag "application", :media => "all"
+
+    :css
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+    /[if lt IE 9]
+      %script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+
+    %link(rel="shortcut icon" href="images/favicon.ico")
+    %link(rel="apple-touch-icon" href="images/apple-touch-icon.png")
+    %link(rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png")
+    %link(rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png")
+
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        <%- if layout_type == "fluid" -%>
+        .container-fluid
+        <%- else -%>
+        .container
+        <%- end -%>
+          %a.btn.btn-navbar{ :data => { :toggle => "collapse", :target => ".nav-collapse" }}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand(href="#") <%= app_name %>
+          .nav-collapse
+            %ul.nav
+              %li.active= link_to "Home", "#"
+              %li= link_to "About", "#about"
+              %li= link_to "Contact", "#contact"
+            %p.navbar-text.pull-right
+              Logged in as
+              = link_to "username", "#"
+
+  <%- if layout_type == "fluid" -%>
+    .container-fluid
+  <%- else -%>
+    .container
+  <%- end -%>
+    <%- if layout_type == "fluid" -%>
+      .row-fluid
+    <%- else -%>
+      .row
+    <%- end -%>
+        .span3
+          .well.sidebar-nav
+            %ul.nav.nav-list
+              %li.nav-header Sidebar
+              %li= link_to "Link", "#"
+              %li= link_to "Link", "#"
+              %li= link_to "Link", "#"
+        .span9
+          = content_tag :h1, yield(:title) if show_title
+          = yield
+
+      %hr
+
+      %footer
+        %p
+          = app_name
+          Copyright &copy;  <%= Time.now.year %>. All Rights Reserved.
+
+    = javascript_include_tag "application"
