@@ -8,6 +8,6 @@ module Bootstrapped
       :group => :all do |app|
         app.config.less.paths << File.join(config.root, 'vendor', 'less',)
     end
-    
+
   end
 end

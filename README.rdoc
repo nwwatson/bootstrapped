@@ -21,6 +21,10 @@ To install with Less Support
 To install with static CSS Support
 
   rails g bootstrapped:install static
+  
+By default, the install generator will include all of the Twitter Bootstrap javascript files in app/assets/javascripts/application.js. If you do not wish to have the javascript files included in your applications.js file, include the --no-javascript option
+
+  rails g boostrapped:install --no-javascript
 
 == Included Generators
 
