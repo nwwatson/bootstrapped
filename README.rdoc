@@ -2,7 +2,7 @@
 
 Bootstrapped is a gem that helps you quickly integrate Twitter's Bootstrap in to your project to enable you to build user interfaces rapidly. 
 
-Bootstrapped also contains generators based off of Ryan Bates's nifty-generators https://github.com/ryanb/nifty-generators/ to help you rapidly scaffold. Unlike generators nifty-generators, Bootstrapped generators do not support HAML.
+Bootstrapped also contains generators based off of Ryan Bates's nifty-generators https://github.com/ryanb/nifty-generators/ to help you rapidly scaffold. Unlike generators nifty-generators.
 
 == Setup
 
@@ -69,6 +69,13 @@ Bootstrapped has been tested using Cucumber. To run the tests, run the following
 If you are having a problem with Bootstrapped, first look at the FAQs above. If you still cannot resolve it, please submit an issue here.
 
 http://github.com/entropillc/bootstrapped/issues
+
+== Change Log
+
+=== Version 1.0.1
+  
+  * Added HAML support in scaffolding
+  * Fixed assets:precompile issue preventing LESS to be compiled for production deployment.
 
 == License
 
