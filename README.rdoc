@@ -32,12 +32,14 @@ Bootstrapped contains layout and scaffold generators that have been modified to 
 
 * bootstrapped:layout: generates generic layout, stylesheet, and helper files.
 * bootstrapped:scaffold: generates a controller and optional model/migration.
+* Note suppliying the --haml option to either generator will generate haml templates instead of the dafault erb
 
 === The Layout Generator
 
 The layout generator allows you to quickly generate a fixed Twitter Bootstrap layout by running the following command:
 
   rails g bootstrapped:layout
+  OR rails g bootstrapped:layout --haml
   
 You can change the name of the layout by specifying the layout name. For example, the following command will generate a layout called photos
 
