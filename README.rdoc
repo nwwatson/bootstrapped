@@ -47,7 +47,7 @@ You can change the name of the layout by specifying the layout name. For example
   
 You can also specify if you want a fixed for fluid layout. If you choose to specify the layout, you must specify the layout name as well. The options are fluid and fixed
 
-  rails g boostrapped:layout [layout_name] [fixed or fluid]
+  rails g bootstrapped:layout [layout_name] [fixed or fluid]
 
 An example command:
 
