@@ -1,0 +1,3 @@
+[submodule "vendor/assets/externals/Font-Awesome"]
+	path = vendor/assets/externals/Font-Awesome
+	url = https://github.com/entropillc/Font-Awesome.git
