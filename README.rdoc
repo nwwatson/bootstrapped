@@ -72,6 +72,12 @@ http://github.com/entropillc/bootstrapped/issues
 
 == Change Log
 
+=== Version 2.0.3
+  
+  * Updated Twitter Bootstrap to 2.0.3
+  * Updated versioning to match Bootstrap for better tracking
+  * Updated version file to contain variable for Bootstrap Version
+
 === Version 1.0.1
   
   * Added HAML support in scaffolding
