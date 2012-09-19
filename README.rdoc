@@ -1,4 +1,4 @@
-= Bootstrapped
+= Bootstrappeded
 
 Bootstrapped is a gem that helps you quickly integrate Twitter's Bootstrap in to your project to enable you to build user interfaces rapidly. 
 
