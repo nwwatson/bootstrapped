@@ -8,6 +8,7 @@ module Bootstrapped
         :after => 'less-rails.after.load_config_initializers', 
         :group => :all do |app|
           app.config.less.paths << File.join(config.root, 'vendor', 'less')
+          app.config.less.paths << File.join(config.root, 'vendor', 'assets', 'externals','Font-Awesome','less')
       end
     end
   end
